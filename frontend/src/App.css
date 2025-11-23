@@ -1,0 +1,81 @@
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --muted: #666;
+  --primary: #0b74de;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: #111;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 18px auto;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #e6e9ef;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+input,
+textarea,
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: 14px;
+}
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+@media (max-width: 520px) {
+  .container {
+    width: 94%;
+    margin: 10px auto;
+  }
+  .card {
+    padding: 12px;
+  }
+  .btn {
+    width: 100%;
+  }
+}
